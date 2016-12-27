@@ -5,6 +5,6 @@ package enable
 const Capability = "ENABLE"
 
 const (
-	commandName = "ENABLE"
+	commandName  = "ENABLE"
 	responseName = "ENABLED"
 )

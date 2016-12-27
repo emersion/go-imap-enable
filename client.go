@@ -18,7 +18,7 @@ func (c *Client) SupportEnable() (bool, error) {
 }
 
 func (c *Client) Enable(caps []string) ([]string, error) {
-	if c.c.State & imap.AuthenticatedState == 0 {
+	if c.c.State&imap.AuthenticatedState == 0 {
 		return nil, client.ErrNotLoggedIn
 	}
 
