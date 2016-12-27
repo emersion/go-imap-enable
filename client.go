@@ -13,8 +13,8 @@ func NewClient(c *client.Client) *Client {
 	return &Client{c: c}
 }
 
-func (c *Client) SupportsEnable() bool {
-	return c.c.Caps[Capability]
+func (c *Client) SupportEnable() (bool, error) {
+	return c.c.Support(Capability)
 }
 
 func (c *Client) Enable(caps []string) ([]string, error) {
