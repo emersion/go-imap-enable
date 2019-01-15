@@ -31,3 +31,6 @@ func (c *Client) Enable(caps []string) ([]string, error) {
 		return res.Capabilities, status.Err()
 	}
 }
+
+// EnableClient is an alias used to compose multiple client extensions.
+type EnableClient = Client
